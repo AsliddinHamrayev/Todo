@@ -1,31 +1,23 @@
-/* eslint-disable vue/no-unused-components */
 <template>
   <div id="app">
-    <Left />
-    <Right />
+    <router-view/>
   </div>
 </template>
-<script>
-import Left from "./components/Left.vue";
-import Right from "./components/Right.vue"
-export default {
-  name: "app",
-  components: {
-    Left,
-    Right,
-  },
-}
-</script>
+
 <style>
-*{
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600&display=swap');
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
+  font-family: 'Fira Sans', sans-serif;
 }
-
 #app {
-  display: flex;
-  max-width: 1400px;
+  max-width: 620px;
+  background: #F2F5FF;
+}
+.footer__btn:focus svg path{
+  stroke: #9C2CF3;
+  fill: #9C2CF3;
 }
 </style>
