@@ -143,4 +143,31 @@ name: "Tasks",
   font-size: 16px;
   font-weight: 500;
 }
+
+@media (max-width: 425px) {
+  .container {
+    max-width: 390px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    max-width: 345px;
+  }
+
+  .calendar__title {
+    font-size: 26px;
+  }
+
+  .calendar-box {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    max-width: 300px;
+  }
+
+}
 </style>

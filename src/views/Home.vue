@@ -4,8 +4,8 @@
     <header>
       <div class="container">
         <div class="header-content">
-          <burrot class="btn__header"><img src="../assets/Group.png" class="i__header" alt=""></burrot>
-      <burrot class="btn__header"><img src="../assets/profile.png" class="i__header" alt=""></burrot>
+          <button class="btn__header"><img src="../assets/Group.png" class="i__header" alt=""></button>
+      <button class="btn__header"><img src="../assets/profile.png" class="i__header" alt=""></button>
         </div>
         <h1 class="main__title">Hello Asliddin</h1>
         <h4 class="main__text">Have a nice day.</h4>
@@ -51,6 +51,11 @@ export default {
   
 }
 
+.btn__header {
+  background-color: transparent;
+  border: none;
+}
+
 .container {
   max-width: 505px;
   margin: 0 auto;
@@ -81,5 +86,32 @@ export default {
     font-size: 26px;
     color: #2E3A59; 
     margin-top: 46px;
+}
+
+@media (max-width: 425px) {
+  header {
+    padding: 15px;
+  }
+
+  .btn__task {
+    padding: 15px 20px;
+  }
+
+  .task-text__title{
+    font-size: 18px;
+  }
+  .main__text {
+    font-size: 16px;
+  }
+
+  .main__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .btn__task {
+    padding: 10px;
+  }
 }
 </style>

@@ -2,13 +2,14 @@
     <div class="create-box">
         <div class="content-top">
             <div class="header">
-                <button class="header__btn"><i><svg width="30" height="22" viewBox="0 0 30 22" fill="none"
+          <router-link to="tasks"> <button class="header__btn"><i><svg width="30" height="22" viewBox="0 0 30 22" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M7.35476 9.16667L12.6283 3.8784C13.3409 3.16378 13.3401 2.00702 12.6265 1.2934C11.9122 0.579076 10.754 0.579076 10.0397 1.2934L0.874083 10.459C0.575306 10.7578 0.575306 11.2422 0.874083 11.541L10.0397 20.7066C10.754 21.4209 11.9122 21.4209 12.6265 20.7066C13.3401 19.993 13.3409 18.8362 12.6283 18.1216L7.35476 12.8333H27.8331C28.8456 12.8333 29.6664 12.0125 29.6664 11C29.6664 9.98748 28.8456 9.16667 27.8331 9.16667H7.35476Z"
                                 fill="white" />
                         </svg>
-                    </i></button>
+                    </i></button> </router-link>
+
                 <h1 class="header__title">Create a Task</h1>
                 <button class="header__btn avtive"><i class="footer__icon"><svg width="34" height="55"
                             viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -188,4 +189,48 @@
         font-size: 24px;
         color: #fff;
     }
+
+    @media (max-width: 425px) {
+  .main__title {
+      font-size: 18px;
+  }
+
+  .time__date {
+      font-size: 24px;
+  }
+
+  .header__title {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .main__text{
+      font-size: 16px;
+  }
+  
+  .btn__category {
+    width: 130px;
+    height: 50px;
+  }
+
+  .btn__main {
+      font-size: 18px;
+  }
+}
+
+@media (max-width: 320px) {
+  .btn__category {
+      width: 100px;
+      font-size: 14px;
+  }
+
+    .main__title {
+        font-size: 16px;
+    }
+
+    .time__date {
+        font-size: 20px;
+    }
+}
 </style>
