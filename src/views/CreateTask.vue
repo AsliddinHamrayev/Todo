@@ -202,7 +202,13 @@
   .header__title {
       font-size: 16px;
   }
+
+  .btn__category {
+          width: 126px;
+    height: 56px;
+  }
 }
+
 
 @media (max-width: 375px) {
   .main__text{
