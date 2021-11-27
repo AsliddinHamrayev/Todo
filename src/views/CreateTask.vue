@@ -25,7 +25,7 @@
             <h1 class="name__title">Name</h1>
             <input type="text" class="input__name" placeholder="Task name">
             <h1 class="name__title">Date</h1>
-            <input type="text" class="input__name" placeholder="Date">
+            <input type="number" class="input__name" placeholder="Date">
         </div>
 
         <div class="content-bottom">

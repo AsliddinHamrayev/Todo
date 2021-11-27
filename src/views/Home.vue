@@ -65,7 +65,7 @@ export default {
 .header-content {
   display: flex;
   justify-content: space-between;
-  padding-top: 60px;
+  padding-top: 5px;
 }
 
 .main__title {
