@@ -13,21 +13,24 @@ const routes = [
   {
     path: '/tasks',
     name: 'Task',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+
     component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/Tasks.vue')
+      return import('../views/Tasks.vue')
     }
   },
   {
     path: '/create-task',
     name: 'Add',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/CreateTask.vue')
+      return import('../views/CreateTask.vue')
+    }
+  },
+
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: function () {
+      return import('../views/Profile.vue')
     }
   },
 ]

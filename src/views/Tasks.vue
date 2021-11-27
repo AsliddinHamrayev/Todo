@@ -148,6 +148,14 @@ name: "Tasks",
   .container {
     max-width: 390px;
   }
+
+  .calendar__title {
+    font-size: 30px;
+  }
+
+  .container {
+    max-width: 400px;
+  }
 }
 
 @media (max-width: 375px) {

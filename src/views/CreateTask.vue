@@ -21,7 +21,6 @@
                         </svg>
                     </i></button>
             </div>
-
             <h1 class="name__title">Name</h1>
             <input type="text" class="input__name" placeholder="Task name">
             <h1 class="name__title">Date</h1>
@@ -55,6 +54,8 @@
             </div>
             <button class="btn__main">Create Task</button>
         </div>
+        
+        
     </div>
 </template>
 
@@ -68,7 +69,6 @@
     .create-box {
         height: 100vh;
         background: linear-gradient(177.23deg, #9C2CF3 -13.49%, #3A49F9 109.75%);
-
     }
 
     .content-top {

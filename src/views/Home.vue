@@ -5,7 +5,7 @@
       <div class="container">
         <div class="header-content">
           <button class="btn__header"><img src="../assets/Group.png" class="i__header" alt=""></button>
-      <button class="btn__header"><img src="../assets/profile.png" class="i__header" alt=""></button>
+          <router-link to="profile"><button class="btn__header"><img src="../assets/profile.png" class="i__header" alt=""></button></router-link>
         </div>
         <h1 class="main__title">Hello Asliddin</h1>
         <h4 class="main__text">Have a nice day.</h4>
