@@ -20,4 +20,8 @@
   stroke: #9C2CF3;
   fill: #9C2CF3;
 }
+
+.footer__icon svg {
+  width: 26px;
+}
 </style>

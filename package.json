@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "swiper": "^7.3.1",
     "vue": "^2.6.11",
     "vue-carousel-card": "^2.0.0",
     "vue-router": "^3.2.0",

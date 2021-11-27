@@ -42,15 +42,19 @@
                       <h4 class="card__date">October 20, 2020</h4>
                   </div>
               </div>
+           
           </div>
       </div>
   </div>
 </template>
 
 <script>
-export default {
 
+export default {
+    components: {
+    },
 }
+
 </script>
 
 <style>
