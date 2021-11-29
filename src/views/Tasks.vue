@@ -146,8 +146,12 @@ name: "Tasks",
   justify-content: center;
   width: 85px;
   height: 123px;
+}
 
-
+Footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .active {
