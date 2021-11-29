@@ -51,11 +51,9 @@
           </div>
         </div>
       </div>
-    <div class="container">
     <h1 class="progress__title">Tasks</h1>
     <Progress :notes="notes"/>
     <Footer />
-    </div>
 
   </div>
 </template>
@@ -91,8 +89,8 @@ name: "Tasks",
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  
 }
+
 
 
 .calendar-box {
