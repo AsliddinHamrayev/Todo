@@ -4,28 +4,35 @@
     <header>
       <div class="container">
         <div class="header-content">
-          <button class="btn__header"><img src="../assets/Group.png" class="i__header" alt=""></button>
-          <router-link to="profile"><button class="btn__header"><img src="../assets/profile.png" class="i__header" alt=""></button></router-link>
+          <button class="btn__header">
+            <img src="../assets/Group.png" class="i__header" alt="" />
+          </button>
+          <router-link to="profile"
+            ><button class="btn__header">
+              <img
+                src="../assets/profile.png"
+                class="i__header"
+                alt=""
+              /></button
+          ></router-link>
         </div>
         <h1 class="main__title">Hello Asliddin</h1>
         <h4 class="main__text">Have a nice day.</h4>
 
-    <Cards />
+        <Cards />
 
-    <h1 class="progress__title">Progress</h1>
+        <h1 class="progress__title">Progress</h1>
 
-    <Progress :notes="notes"/>
+        <Progress :notes="notes" />
       </div>
     </header>
-      <Footer />
-
-    
+    <Footer />
   </div>
 </template>
 <script>
-import Cards from "../components/Cards.vue"
-import Progress from "../components/Progress.vue"
-import Footer from "../components/Footer.vue"
+import Cards from "../components/Cards.vue";
+import Progress from "../components/Progress.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
   name: "app",
@@ -36,26 +43,22 @@ export default {
   },
   props: ["notes"],
 
-  methods:{
-   
-  },
+  methods: {},
   mounted() {
-            const initNotes = localStorage.getItem('note');
-            const notes = JSON.parse(initNotes ? initNotes : "[]");
-            console.log(notes);
-            this.notes = notes
-        },
-}
+    const initNotes = localStorage.getItem("note");
+    const notes = JSON.parse(initNotes ? initNotes : "[]");
+    console.log(notes);
+    this.notes = notes;
+  },
+};
 </script>
 <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap");
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  
+  font-family: "Poppins", sans-serif;
 }
 
 header {
@@ -70,7 +73,7 @@ header {
 .container {
   max-width: 505px;
   margin: 0 auto;
-  color: #2E3A59;
+  color: #2e3a59;
 }
 
 .header-content {
@@ -83,7 +86,7 @@ header {
   margin-top: 46px;
   font-weight: 600;
   font-size: 46px;
-  color: #2E3A59;
+  color: #2e3a59;
 }
 
 .main__text {
@@ -93,10 +96,10 @@ header {
 }
 
 .progress__title {
-    font-weight: 600;
-    font-size: 26px;
-    color: #2E3A59; 
-    margin-top: 46px;
+  font-weight: 600;
+  font-size: 26px;
+  color: #2e3a59;
+  margin-top: 46px;
 }
 
 @media (max-width: 425px) {
@@ -108,7 +111,7 @@ header {
     padding: 15px 20px;
   }
 
-  .task-text__title{
+  .task-text__title {
     font-size: 18px;
   }
   .main__text {

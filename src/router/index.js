@@ -1,43 +1,43 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/tasks',
-    name: 'Task',
+    path: "/tasks",
+    name: "Task",
     component: function () {
-      return import('../views/Tasks.vue')
-    }
+      return import("../views/Tasks.vue");
+    },
   },
   {
-    path: '/create-task',
-    name: 'Add',
+    path: "/create-task",
+    name: "Add",
     component: function () {
-      return import('../views/CreateTask.vue')
-    }
+      return import("../views/CreateTask.vue");
+    },
   },
 
   {
-    path: '/profile',
-    name: 'Profile',
+    path: "/profile",
+    name: "Profile",
     component: function () {
-      return import('../views/Profile.vue')
-    }
+      return import("../views/Profile.vue");
+    },
   },
-]
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
