@@ -73,6 +73,9 @@
     footer {
         margin-top: 32px;
         bottom: 0;  
+        position: fixed;
+        background-color: #fff;
+        width: 100%;
     }
 
     .footer__icon {

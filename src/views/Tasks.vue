@@ -14,7 +14,7 @@
                         </i></button>
         </div>
         <div class="calendar-main">
-          <h1 class="calendar__title">Nov, 2021</h1>
+          <Weather/>
           <router-link to="/create-task">
             <button class="btn__add__task">+ Add task</button>
           </router-link>
@@ -51,8 +51,11 @@
           </div>
         </div>
       </div>
-    <h1 class="progress__title">Tasks</h1>
+      <div class="footer">
+        <h1 class="progress__title">Tasks</h1>
     <Progress :notes="notes"/>
+    
+      </div>
     <Footer />
 
   </div>
@@ -61,11 +64,13 @@
 <script>
 import Footer from "../components/Footer.vue"
 import Progress from "../components/Progress.vue"
+import Weather from "../components/Weather.vue"
 export default {
 name: "Tasks",
   components: {
     Footer,
     Progress,
+    Weather,
   },
 
   props: ["notes"],
@@ -95,11 +100,20 @@ name: "Tasks",
   height: 100%;
 }
 
+.footer {
+  min-height: 150px;
+  padding-bottom: 50px;
+}
+
 .calendar-box {
   background-color: #fff;
   padding: 45px;
   border-radius: 0 0 15px 15px;
   box-shadow: 5px 8px 24px 2px rgba(0,0,0,0.24);
+}
+
+.progress__title {
+  margin-left: 25px;
 }
 
 

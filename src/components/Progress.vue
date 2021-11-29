@@ -73,4 +73,7 @@ color: #AEAEB3;
     margin-top: 15px;
 }
 
+.task-box {
+    margin-bottom: 50px;
+}
 </style>
