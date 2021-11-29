@@ -53,7 +53,7 @@
       </div>
     <div class="container">
     <h1 class="progress__title">Tasks</h1>
-    <Progress/>
+    <Progress :notes="notes"/>
     <Footer />
     </div>
 
@@ -69,11 +69,19 @@ name: "Tasks",
     Footer,
     Progress,
   },
+
+  props: ["notes"],
  
 
   methods:{
    
-  }
+  },
+  mounted() {
+            const initNotes = localStorage.getItem('note');
+            const notes = JSON.parse(initNotes ? initNotes : "[]");
+            console.log(notes);
+            this.notes = notes
+        },
 }
 </script>
 

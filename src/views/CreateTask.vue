@@ -21,11 +21,16 @@
                         </svg>
                     </i></button>
             </div>
-            <div class="form" @submit.prevent="AddNewNote">
+            <div class="form" @keypress.enter="AddNewNote">
             <h1 class="name__title">Name</h1>
             <input type="text" class="input__name" placeholder="Task name" v-model="NoteName">
             <h1 class="name__title">Date</h1>
             <input type="number" class="input__name" placeholder="Date" v-model="NoteDate">
+
+        </div>
+
+
+        </div>
 
         <div class="content-bottom">
             <div class="time-box">
@@ -55,25 +60,16 @@
             </div>
             <button type="submit" class="btn__main" @click="AddNewNote">Create Task</button>
         </div>
-            <div class="task" v-for="(note, index) in notes" :key="index">
-                <p>{{note.Name}}</p>
-                <p>{{note.Date}}</p>
-                <button class="delete" @click="RemoveNote">Delete</button>
-            </div>
-
-
-        </div>
-
-
-
-        </div>
         
         
     </div>
 </template>
 
 <script>
+
     export default {
+        components: {
+        },
 
         data() {
             return {
@@ -84,6 +80,10 @@
         },
         methods: {
             AddNewNote() {
+
+                if(this.NoteName === '') {
+                    return;
+                }
                 console.log(this.NoteDate, this.NoteName);
                 this.notes.push({
                     Name: this.NoteName,
@@ -217,6 +217,7 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 15px;
+        justify-content: space-around;
     }
 
     .btn__category {

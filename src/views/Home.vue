@@ -14,7 +14,7 @@
 
     <h1 class="progress__title">Progress</h1>
 
-    <Progress />
+    <Progress :notes="notes"/>
     <Footer />
       </div>
     </header>
@@ -34,10 +34,17 @@ export default {
     Progress,
     Footer,
   },
+  props: ["notes"],
 
   methods:{
    
-  }
+  },
+  mounted() {
+            const initNotes = localStorage.getItem('note');
+            const notes = JSON.parse(initNotes ? initNotes : "[]");
+            console.log(notes);
+            this.notes = notes
+        },
 }
 </script>
 <style>

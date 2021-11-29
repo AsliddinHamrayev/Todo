@@ -19,7 +19,7 @@
 
 <script>
 export default {
-//  props: notes,
+ props: ['notes'],
 }
 </script>
 
