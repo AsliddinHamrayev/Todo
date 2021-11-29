@@ -8,6 +8,7 @@
                       <div class="task-text-box">
                           <h1 class="task-text__title">{{ note.Name }}</h1>
                           <h4 class="task-text__description">{{ note.Date }}</h4>
+                          <button @click="RemoveNote">delete</button>
                       </div>
                   </div>
               </div>
@@ -20,6 +21,24 @@
 <script>
 export default {
  props: ['notes'],
+
+ methods: {
+
+     RemoveNote(index) {
+                this.notes.splice(index, 1)
+            },
+ },
+
+  watch: {
+            notes: {
+                deep: true,
+                handler() {
+                    const notes = this.notes;
+                    localStorage.setItem('note', JSON.stringify(notes))
+                }
+            }
+        }
+
 }
 </script>
 
