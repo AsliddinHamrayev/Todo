@@ -92,7 +92,7 @@ name: "Tasks",
 }
 
 .task-box {
-  height: 100vh;
+  height: 100%;
 }
 
 .calendar-box {
