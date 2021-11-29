@@ -91,7 +91,9 @@ name: "Tasks",
   font-family: 'Poppins', sans-serif;
 }
 
-
+.task-box {
+  height: 100vh;
+}
 
 .calendar-box {
   background-color: #fff;
