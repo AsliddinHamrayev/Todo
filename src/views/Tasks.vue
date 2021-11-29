@@ -148,12 +148,6 @@ name: "Tasks",
   height: 123px;
 }
 
-Footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
 .active {
   background-color: #e6e6e6;
   border-radius: 35px;
