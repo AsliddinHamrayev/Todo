@@ -13,7 +13,6 @@ const routes = [
   {
     path: '/tasks',
     name: 'Task',
-
     component: function () {
       return import('../views/Tasks.vue')
     }

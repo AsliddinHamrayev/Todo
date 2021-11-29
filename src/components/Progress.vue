@@ -3,23 +3,15 @@
       <div class="container">
           <div class="progress-content">
               <div class="task-box">
-                  <div class="card-task">
+                  <div class="card-task" v-for="(note, index) in notes" :key="index">
                       <img src="../assets/10.png" class="task__img" alt="">
                       <div class="task-text-box">
-                          <h1 class="task-text__title">Design Changes</h1>
-                          <h4 class="task-text__description">2 days ago</h4>
-                      </div>
-                  </div>
-
-                  <div class="card-task">
-                      <img src="../assets/10.png" class="task__img" alt="">
-                      <div class="task-text-box">
-                          <h1 class="task-text__title">Design Changes</h1>
-                          <h4 class="task-text__description">2 days ago</h4>
+                          <h1 class="task-text__title">{{ note.Name }}</h1>
+                          <h4 class="task-text__description">{{ note.Date }}</h4>
                       </div>
                   </div>
               </div>
-              
+                
           </div>
       </div>
   </main>
@@ -27,7 +19,7 @@
 
 <script>
 export default {
-
+//  props: notes,
 }
 </script>
 

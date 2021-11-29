@@ -21,11 +21,11 @@
                         </svg>
                     </i></button>
             </div>
+            <div class="form" @submit.prevent="AddNewNote">
             <h1 class="name__title">Name</h1>
-            <input type="text" class="input__name" placeholder="Task name">
+            <input type="text" class="input__name" placeholder="Task name" v-model="NoteName">
             <h1 class="name__title">Date</h1>
-            <input type="number" class="input__name" placeholder="Date">
-        </div>
+            <input type="number" class="input__name" placeholder="Date" v-model="NoteDate">
 
         <div class="content-bottom">
             <div class="time-box">
@@ -43,6 +43,7 @@
             <p class="main__text">Lorem ipsum dolor sit amet, er adipiscing elit, sed dianummy nibh euismod dolor sit
                 amet, er adipiscing elit, sed dianummy nibh euismod.</p>
 
+
             <h1 class="main__title">Category</h1>
             <div class="category-box">
                 <button class="btn__category">Design</button>
@@ -52,7 +53,19 @@
                 <button class="btn__category">Testing</button>
                 <button class="btn__category">Quick call</button>
             </div>
-            <button class="btn__main">Create Task</button>
+            <button type="submit" class="btn__main" @click="AddNewNote">Create Task</button>
+        </div>
+            <div class="task" v-for="(note, index) in notes" :key="index">
+                <p>{{note.Name}}</p>
+                <p>{{note.Date}}</p>
+                <button class="delete" @click="RemoveNote">Delete</button>
+            </div>
+
+
+        </div>
+
+
+
         </div>
         
         
@@ -62,6 +75,47 @@
 <script>
     export default {
 
+        data() {
+            return {
+                NoteName:'',
+                NoteDate: '',
+                notes: [],
+            }
+        },
+        methods: {
+            AddNewNote() {
+                console.log(this.NoteDate, this.NoteName);
+                this.notes.push({
+                    Name: this.NoteName,
+                    Date: this.NoteDate,
+                });
+
+                this.NoteName = '';
+                this.NoteDate = '';
+            },
+            
+            RemoveNote(index) {
+                this.notes.splice(index, 1)
+            },
+        },
+
+
+        mounted() {
+            const initNotes = localStorage.getItem('note');
+            const notes = JSON.parse(initNotes ? initNotes : "[]");
+            console.log(notes);
+            this.notes = notes
+        },
+
+        watch: {
+            notes: {
+                deep: true,
+                handler() {
+                    const notes = this.notes;
+                    localStorage.setItem('note', JSON.stringify(notes))
+                }
+            }
+        }
     }
 </script>
 
@@ -98,6 +152,12 @@
         font-weight: 600;
         font-size: 20px;
     }
+
+
+    .task {
+        color: #000;
+    }
+
 
     .input__name {
         background-color: transparent;

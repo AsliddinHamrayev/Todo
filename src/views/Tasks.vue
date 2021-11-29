@@ -69,6 +69,7 @@ name: "Tasks",
     Footer,
     Progress,
   },
+ 
 
   methods:{
    
