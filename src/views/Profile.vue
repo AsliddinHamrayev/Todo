@@ -21,8 +21,8 @@
               </div>
               <button class="logOut">Log out page</button>
           </div>
-          <Footer />
       </div>
+        <Footer />
   </div>
 </template>
 
@@ -39,7 +39,7 @@ export default {
  .profile-box {
     height: 100vh;
     background: #F2F5FF;
-    padding: 15px 20px;
+    padding: 15px 0px;
 }
 
 .profile__img {

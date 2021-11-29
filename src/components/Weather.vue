@@ -6,9 +6,8 @@
 export default {
  data: function () {
     return {
-      apikey: "3f6523220ef2d2a56a4b523bf022b783",
+      apikey: "d1f18a24ed09807c185ccf764ff6c255",
       results: [],
-      query: "",
     };
   },
 
@@ -16,11 +15,11 @@ export default {
         WeatherFetched() {
       fetch(
         `
-https://api.themoviedb.org/3/movie/latest?api_key=${this.apikey}&language=en-US`
+        api.openweathermap.org/data/2.5/weather?q=London,uk&appid=${this.apikey}`
       )
         .then((res) => res.json())
         .then((data) => {
-            this.results = data.results;
+            this.results = data;
         });
         console.log(this.results);
     }

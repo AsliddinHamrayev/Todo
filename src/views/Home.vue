@@ -15,9 +15,9 @@
     <h1 class="progress__title">Progress</h1>
 
     <Progress :notes="notes"/>
-    <Footer />
       </div>
     </header>
+      <Footer />
 
     
   </div>
@@ -56,6 +56,10 @@ export default {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   
+}
+
+header {
+  padding-bottom: 50px;
 }
 
 .btn__header {

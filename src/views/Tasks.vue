@@ -14,7 +14,7 @@
                         </i></button>
         </div>
         <div class="calendar-main">
-          <Weather/>
+          <Weather :results="results"/>
           <router-link to="/create-task">
             <button class="btn__add__task">+ Add task</button>
           </router-link>
