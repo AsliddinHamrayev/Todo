@@ -1,14 +1,14 @@
 <template>
   <div class="weather-box">
-      <div class="weather-con">
-          <h1 class="country__name">{{weather.name}}</h1>
+    <div class="weather-con">
+      <h1 class="country__name">{{ weather.name }}</h1>
 
-          <p class="temp">havo harorati: {{weather.main.temp}}°</p>
-
-          <p>{{ dateBuilder }}</p>
-          <p>{{GetDays}}-{{GetMonth}}</p>
-          <p>{{GetYear}}</p>
+      <p class="temp">havo harorati: {{ weather.main.temp }}°</p>
+      <div class="date-box">
+        <p class="year__text">{{ GetYear }}</p>
+        <p class="date__text">{{ GetDays }}-{{ GetMonth }}</p>
       </div>
+    </div>
   </div>
 </template>
 
@@ -23,16 +23,18 @@ export default {
 
   methods: {
     WeatherFetched() {
-      fetch(`https://api.openweathermap.org/data/2.5/weather?q=Tashkent,uz&units=metric&APPID=${this.apikey}`)
+      fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=Tashkent,uz&units=metric&APPID=${this.apikey}`
+      )
         .then((res) => {
-            return res.json();
+          return res.json();
         })
         .then(this.setResults);
     },
     setResults(data) {
-        this.weather = data;
-        console.log(this.weather);
-    }
+      this.weather = data;
+      console.log(this.weather);
+    },
   },
 
   computed: {
@@ -43,15 +45,14 @@ export default {
       return `${year}`;
     },
 
-    GetDays(){
+    GetDays() {
       let d = new Date();
 
       let date = d.getDate();
-        return `${date}`
+      return `${date}`;
     },
 
-    GetMonth(){
-
+    GetMonth() {
       let d = new Date();
       let months = [
         "Yanvar",
@@ -67,16 +68,16 @@ export default {
         "Noyabr",
         "Dekabr",
       ];
-      
+
       let month = months[d.getMonth()];
 
-      return `${month}`
+      return `${month}`;
     },
 
     GetWeekDays() {
       let d = new Date();
 
-        let days = [
+      let days = [
         "Yakshanba",
         "Dushanba",
         "Seshanba",
@@ -86,14 +87,23 @@ export default {
         "Shanba",
       ];
       let day = days[d.getDay()];
-        return `${day}`
-    }
+      return `${day}`;
+    },
   },
 
-  created: function() {
+  created: function () {
     this.WeatherFetched();
   },
 };
 </script>
 
-<style></style>
+<style>
+.date-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.year__text {
+  font-size: 24px;
+}
+</style>

@@ -19,8 +19,7 @@
         <h1 class="main__title">Hello Asliddin</h1>
         <h4 class="main__text">Have a nice day.</h4>
 
-        <Cards />
-
+          <Cards :notes="notes"/>
         <h1 class="progress__title">Progress</h1>
 
         <Progress :notes="notes" />
@@ -36,6 +35,26 @@ import Footer from "../components/Footer.vue";
 
 export default {
   name: "app",
+  // data() {
+  //   return {
+
+  //     settigs: {
+  //       "dots": true,
+  //       "_dotsClass": "slick-dots custom-dot-class",
+  //       get "dotsClass"() {
+  //         return this["_dotsClass"];
+  //       },
+  //       set "dotsClass"(value) {
+  //         this["_dotsClass"]=value;
+  //       },
+  //       "edgeFriction": 0.35,
+  //       "infinite": false,
+  //       "speed": 500,
+  //       "slidesToShow": 1,
+  //       "slidesToScroll": 1
+  //     }
+  //   }
+  // },
   components: {
     Cards,
     Progress,

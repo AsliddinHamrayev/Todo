@@ -9,6 +9,7 @@
               <h1 class="task-text__title">{{ note.Name }}</h1>
               <h4 class="task-text__description">{{ note.Date }}</h4>
               <button @click="RemoveNote">delete</button>
+              <button class="progress" @click="ProgressBtn">progress</button>
             </div>
           </div>
         </div>
