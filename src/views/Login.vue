@@ -16,6 +16,8 @@
             <img src="../assets/view.png" class="i-view" alt="" @click="show">
 
             <button class="enter">Kirish</button>
+
+            <p class="toRegister">Do not have an account? <router-link to="register" class="link">register</router-link></p>
           </form>
       </div>
   </div>
@@ -102,5 +104,18 @@ export default {
     transform: translate(115px, -32px);
     opacity: 50%;
 }
+
+.toRegister {
+    font-size: 14px;
+    background: #fff;
+    color: #000;
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 12px;
+}
          
+.link {
+    color: rgb(151, 151, 151);
+    text-decoration: underline;
+}
 </style>
