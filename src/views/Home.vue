@@ -4,6 +4,7 @@
     <header>
       <div class="container">
         <div class="header-content">
+
           <button class="btn__header">
             <img src="../assets/Group.png" class="i__header" alt="" />
           </button>
@@ -16,6 +17,9 @@
               /></button
           ></router-link>
         </div>
+        <router-link to="login">Login</router-link>|
+        <router-link to="register">Register</router-link>
+
         <h1 class="main__title">Hello Asliddin</h1>
         <h4 class="main__text">Have a nice day.</h4>
 
